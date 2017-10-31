@@ -10,15 +10,16 @@ App follows MVVM project architecture.
 
 Libraries used in the project
 
-•	Design : AppCompat, CardView, RecyclerView ,DesignLibrary
-•	Reactive Programming : RxJava2 & RxAndroid
-•	Image Loading: Glide
-•	Json parsing: Gson
-•	Depending Injection: Dagger2
-•	View Injection: Butterknife
-•	Sqlite ORM: Room
-•	Android Architecture: MVVM
-•	Testing Tools: Robolectric, Junit, Mockito, Espresso
+1	Design : AppCompat, CardView, RecyclerView ,DesignLibrary
+2	Reactive Programming : RxJava2 & RxAndroid
+3	Image Loading: Glide
+4	Json parsing: Gson
+5	Depending Injection: Dagger2
+6	View Injection: Butterknife
+7	Sqlite ORM: Room
+8	Android Architecture: MVVM
+9	Testing Tools: Robolectric, Junit, Mockito, Espresso
+
 
 
 
