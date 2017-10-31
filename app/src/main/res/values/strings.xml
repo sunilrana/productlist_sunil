@@ -1,0 +1,26 @@
+<resources>
+    <string name="app_name">Product List</string>
+
+    <string name="create_product">Create Product</string>
+    <string name="show_product">Show Product</string>
+
+    <string name="name">Name</string>
+    <string name="description">Description</string>
+    <string name="reg_price">Regular Price</string>
+    <string name="sale_price">Sales Price</string>
+    <string name="photo">Photo</string>
+    <string name="color">Color</string>
+    <string name="store">Store</string>
+    <string name="store_detail">Store : %s</string>
+    <string name="color_detail">Color : %s</string>
+    <string name="sale_price_detail">Sale Price : %s</string>
+    <string name="regular_price_detail">Regular Price : %s</string>
+
+    <string name="submit">Submit</string>
+    <string name="update">Update</string>
+
+    <string name="add_msg">Add Successfully</string>
+    <string name="update_msg">Update Successfully</string>
+
+
+</resources>
