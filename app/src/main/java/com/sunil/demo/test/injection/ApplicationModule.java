@@ -5,6 +5,7 @@ import android.content.Context;
 
 import com.sunil.demo.test.AppController;
 import com.sunil.demo.test.db.ProductDatabase;
+import com.sunil.demo.test.repository.MockData;
 import com.sunil.demo.test.repository.ProductRepository;
 import com.sunil.demo.test.repository.ProductRepositoryImpl;
 
@@ -41,8 +42,12 @@ public class ApplicationModule {
 
     @Provides
     @Singleton
-    ProductRepository providesProductRepository(ProductDatabase eventDatabase) {
-        return new ProductRepositoryImpl(eventDatabase);
+    ProductRepository providesProductRepository(ProductDatabase eventDatabase , MockData mockData) {
+        return new ProductRepositoryImpl(eventDatabase, mockData);
     }
 
+    @Provides
+    MockData provideMockData(Context context) {
+        return new MockData(context);
+    }
 }

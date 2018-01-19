@@ -85,6 +85,7 @@ public class ProductListFragment extends Fragment {
         recyclerView.setAdapter(adapter);
 
         final DividerItemDecoration dividerItemDecoration = new DividerItemDecoration(recyclerView.getContext(), layoutManager.getOrientation());
+
         recyclerView.addItemDecoration(dividerItemDecoration);
     }
 

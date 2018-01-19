@@ -1,23 +1,24 @@
 apply plugin: 'com.android.application'
 
 android {
-    compileSdkVersion 25
-    buildToolsVersion '25.0.3'
+    compileSdkVersion 26
+    buildToolsVersion '26.0.2'
+    flavorDimensions "default"
     defaultConfig {
         applicationId "com.sunil.demo.test"
-        minSdkVersion 15
-        targetSdkVersion 25
+        minSdkVersion 16
+        targetSdkVersion 26
         versionCode 1
         versionName "1.0"
         testInstrumentationRunner "com.sunil.demo.test.injection.MockTestRunner"
 
-        jackOptions {
+ /*       jackOptions {
             enabled true
         }
-
+*/
         productFlavors {
             dev {
-                minSdkVersion 21
+                minSdkVersion 16
             }
             prod {
                 minSdkVersion 15

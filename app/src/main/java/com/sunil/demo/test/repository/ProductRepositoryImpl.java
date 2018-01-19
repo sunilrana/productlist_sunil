@@ -2,13 +2,14 @@ package com.sunil.demo.test.repository;
 
 import android.arch.lifecycle.LiveData;
 
+import com.sunil.demo.test.db.ProductDatabase;
+import com.sunil.demo.test.entity.Product;
+
 import java.util.List;
 
 import javax.inject.Inject;
 
 import io.reactivex.Completable;
-import com.sunil.demo.test.db.ProductDatabase;
-import com.sunil.demo.test.entity.Product;
 
 /**
  * Created by Sunil Rana on 10/28/2017.
@@ -19,8 +20,10 @@ public class ProductRepositoryImpl implements ProductRepository {
     @Inject
     ProductDatabase eventDatabase;
 
-    public ProductRepositoryImpl(ProductDatabase eventDatabase) {
+    MockData mock;
+    public ProductRepositoryImpl(ProductDatabase eventDatabase, MockData mockData) {
         this.eventDatabase = eventDatabase;
+        this.mock = mockData;
     }
 
 
@@ -31,6 +34,7 @@ public class ProductRepositoryImpl implements ProductRepository {
 
     @Override
     public LiveData<List<Product>> getProducts() {
+
         return eventDatabase.productDao().getProducts();
     }
 
@@ -47,6 +51,11 @@ public class ProductRepositoryImpl implements ProductRepository {
     @Override
     public int getProductCount() {
         return eventDatabase.productDao().getProductCount();
+    }
+
+    @Override
+    public String getMockData() {
+        return mock.mockData;
     }
 }
 

@@ -5,6 +5,7 @@ import android.arch.lifecycle.LiveData;
 import android.arch.lifecycle.MutableLiveData;
 import android.arch.lifecycle.ViewModel;
 
+import com.google.gson.Gson;
 import com.sunil.demo.test.entity.Product;
 import com.sunil.demo.test.injection.ApplicationComponent;
 import com.sunil.demo.test.repository.ProductRepository;
@@ -81,10 +82,16 @@ public class ProductListViewModel extends ViewModel implements ApplicationCompon
 
     public void setMockData(boolean value) {
         if (value) {
+            String text = productRepository.getMockData();
+            System.out.println("Text " +text);
+               Product[] product = new Gson().fromJson(text, Product[].class);
+               for(Product product1 : product){
+                   addProduct(product1);
+               }
 
-            addProduct(new Product(0, "Mock3", "Mock Description3", "20", "15", "", "green", "B"));
-            addProduct(new Product(0, "Mock2", "Mock Description2", "30", "25", "", "yellow", "A"));
-            addProduct(new Product(0, "Mock1", "Mock Description1", "15", "10", "", "red", "A"));
+//            addProduct(new Product(0, "Mock3", "Mock Description3", "20", "15", "", "green", "B"));
+//            addProduct(new Product(0, "Mock2", "Mock Description2", "30", "25", "", "yellow", "A"));
+//            addProduct(new Product(0, "Mock1", "Mock Description1", "15", "10", "", "red", "A"));
 
         }
     }
