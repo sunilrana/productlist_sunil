@@ -1,3 +1,4 @@
+
 # productlist_sunil
 
 This repository contains a assignment of good Android Architecture.
@@ -31,3 +32,4 @@ The app has following packages:
 6.	ui.product: View classes along with their corresponding ViewModel.
 7.	utils: Utility classes.
 Classes have been designed in such a way that it could be inherited and maximize the code reuse.
+
