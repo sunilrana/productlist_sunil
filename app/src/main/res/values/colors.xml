@@ -8,4 +8,6 @@
 
     <color name="button_col">#4d9e91</color>
     <color name="button_press">#7ecfc1</color>
+
+    <color name="transparent">#00000000</color>
 </resources>

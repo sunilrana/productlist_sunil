@@ -3,9 +3,18 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context="com.sunil.demo.test.ui.product.list.ProductListActivity">
 
-
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/my_toolbar"
+        android:minHeight="?attr/actionBarSize"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:titleTextColor="@android:color/white"
+        android:background="?attr/colorPrimary"
+        android:elevation="4dp"
+        />
     <fragment
         android:id="@+id/product_list_fragment"
         class="com.sunil.demo.test.ui.product.list.ProductListFragment"

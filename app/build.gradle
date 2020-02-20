@@ -1,25 +1,27 @@
 apply plugin: 'com.android.application'
 
 android {
-    compileSdkVersion 25
+    compileSdkVersion 27
     buildToolsVersion '25.0.3'
     defaultConfig {
         applicationId "com.sunil.demo.test"
-        minSdkVersion 15
-        targetSdkVersion 25
+        minSdkVersion 17
+        targetSdkVersion 27
         versionCode 1
         versionName "1.0"
         testInstrumentationRunner "com.sunil.demo.test.injection.MockTestRunner"
 
-        jackOptions {
-            enabled true
-        }
-
+//        jackOptions {
+//            enabled true
+//        }
+        flavorDimensions "version"
         productFlavors {
             dev {
+                dimension "version"
                 minSdkVersion 21
             }
             prod {
+                dimension "version"
                 minSdkVersion 15
             }
         }
@@ -38,14 +40,14 @@ android {
 }
 ext {
     arch_version = '1.0.0-beta2'
-    support_library_version = '25.3.1'
+    support_library_version = '27.1.1'
     dagger_version = "2.8"
     espresso_version = '2.2.2'
     runner_version = '0.5'
 }
 dependencies {
     compile fileTree(dir: 'libs', include: ['*.jar'])
-
+    implementation project(path: ':testlib')
     compile "com.android.support:appcompat-v7:$support_library_version"
     compile "com.android.support:recyclerview-v7:$support_library_version"
     compile "com.android.support:design:$support_library_version"
@@ -70,6 +72,7 @@ dependencies {
     annotationProcessor "com.google.dagger:dagger-compiler:${dagger_version}"
     annotationProcessor "android.arch.lifecycle:compiler:${arch_version}"
     annotationProcessor "android.arch.persistence.room:compiler:${arch_version}"
+
 
     testCompile 'junit:junit:4.12'
     testCompile 'org.mockito:mockito-core:2.8.9'
